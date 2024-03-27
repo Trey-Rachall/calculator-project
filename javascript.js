@@ -1,3 +1,4 @@
+const body = document.body;
 /* variables for the input */
 let firstNumber = 10;
 let operator = '/';
@@ -41,12 +42,17 @@ function operate() {
       return solution;
    };
 };
-console.log(operate());
-/* function operate(operator, operateOne, operateTwo) {
-   let userOperator = operator;
-   let userNumberOne = operateOne;
-   let userNumberTwo = operateTwo;
-   if (userOperator = "+") {
-      add()
-   }
-}; */
+
+/* event listener for buttons */
+const bttns = document.querySelectorAll("button");
+bttns.forEach((button) => {
+   button.addEventListener("click", () => {
+      /*ADD THE FUNCTION HERE */
+   })
+});
+
+
+
+function popDisplay() {
+
+};
