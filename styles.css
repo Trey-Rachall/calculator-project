@@ -1,0 +1,57 @@
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+p   {
+  background-color: grey;
+  color: white;
+  
+}
+
+.calcBody {
+    width: 500px;
+    height: 700px;
+    background-color: black;
+}
+
+.numBank {
+    height: 200px;
+}
+
+.symbol {
+    background-color: orange;
+}
+
+.buttons {
+    
+    
+}
+
+.rowOne {
+    display: flex;
+    
+}
+
+.rowTwo {
+    display: flex;
+    
+}
+
+.rowThree {
+    display: flex;
+    
+}
+
+.rowFour {
+    display: flex;
+    
+}
+
+.rowFive {
+    display: flex;
+}
