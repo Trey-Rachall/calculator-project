@@ -1,32 +1,52 @@
 /* variables for the input */
-let firstNumber = null;
-let operator = null;
-let secondNumber = null;
+let firstNumber = 10;
+let operator = '/';
+let secondNumber = 10;
 
 
-function add(numberOne, numberTwo) {
-   let addSolution = numberOne + numberTwo;
+function add() {
+   let addSolution = firstNumber + secondNumber;
    return addSolution;
 };
 
-
-function subtract(numberOne, numberTwo) {
-   let subtractSolution = numberOne - numberTwo;
+function subtract() {
+   let subtractSolution = firstNumber - secondNumber;
    return subtractSolution;
 };
 
 
-function multiply(numberOne, numberTwo) {
-   let multiplySolution = numberOne * numberTwo;
+function multiply() {
+   let multiplySolution = firstNumber * secondNumber;
    return multiplySolution;
 };
 
 
-function divide(numberOne, numberTwo) {
-   let divideSolution = numberOne/numberTwo;
+function divide() {
+   let divideSolution = firstNumber/secondNumber;
    return divideSolution;
 };
 
-function operate(operator, numberOne, numberTwo) {
-   
+function operate() {
+   if (operator === "+") {
+      solution = add();
+      return solution;
+   } else if (operator === "-") {
+      solution = subtract();
+      return solution;
+   } else if (operator === "X") {
+      solution = multiply();
+      return solution;
+   } else if (operator === "/") {
+      solution = divide();
+      return solution;
+   };
 };
+console.log(operate());
+/* function operate(operator, operateOne, operateTwo) {
+   let userOperator = operator;
+   let userNumberOne = operateOne;
+   let userNumberTwo = operateTwo;
+   if (userOperator = "+") {
+      add()
+   }
+}; */
