@@ -43,16 +43,21 @@ function operate() {
    };
 };
 
-/* event listener for buttons */
+/* setting the buttons to variable bttns */
 const bttns = document.querySelectorAll("button");
+
+/* event listener for buttons */
 bttns.forEach((button) => {
    button.addEventListener("click", () => {
-      /*ADD THE FUNCTION HERE */
-   })
+      popDisplay(button.textContent);
+      
+   });
 });
 
 
-
-function popDisplay() {
-
+/*STILL NEED TO STORE THE CONTENT INTO VARIABLE*/
+function popDisplay(buttonText) {
+   document.querySelector('.numBank p').textContent = buttonText;
+   let firstNumber = buttonText;
+   console.log(firstNumber);
 };
