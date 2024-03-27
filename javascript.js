@@ -28,5 +28,5 @@ function divide(numberOne, numberTwo) {
 };
 
 function operate(operator, numberOne, numberTwo) {
-
+   
 };

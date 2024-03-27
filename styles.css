@@ -7,7 +7,7 @@ body {
     flex-grow: 1;
 }
 
-p   {
+button   {
   background-color: grey;
   color: white;
   font-size: 32px;
@@ -28,9 +28,10 @@ p   {
     justify-content: flex-end;
     align-items: flex-end;
     font-size: 98px;
+    color: white;
 }
 .bigNum {
-    min-width: 234px;
+    min-width: 230px;
 }
 .symbol {
     background-color: orange;
@@ -67,7 +68,7 @@ p   {
     
 }
 
-.rowOne p, .rowTwo p, .rowThree p, .rowFour p, .rowFive p {
+.rowOne button, .rowTwo button, .rowThree button, .rowFour button, .rowFive button {
     flex: 1; 
     display: flex;
     justify-content: center; 
