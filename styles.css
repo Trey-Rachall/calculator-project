@@ -16,7 +16,8 @@ button   {
 }
 
 .calcBody {
-    
+    width: 460px;
+    height: 779px;
     background-color: black;
 }
 
@@ -29,6 +30,8 @@ button   {
     align-items: flex-end;
     font-size: 98px;
     color: white;
+    border: 2px;
+  border-style: solid;
 }
 .bigNum {
     min-width: 230px;
