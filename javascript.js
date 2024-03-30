@@ -1,8 +1,8 @@
 const body = document.body;
 /* variables for the input */
-let firstNumber = 10;
+let firstNumber = "";
 let operator = '/';
-let secondNumber = 10;
+let secondNumber = null;
 
 
 function add() {
@@ -42,21 +42,32 @@ function operate() {
       return solution;
    };
 };
-
+const numStorage = [];
+let counter = 0;
 /*selects the number buttons*/
 const numButton = document.querySelectorAll(".number");
 numButton.forEach((button) => {
    button.addEventListener("click", () => {
-      console.log(15);
+      let newVariableValue = button.textContent;
+      numStorage.push(newVariableValue);
+      console.log(newVariableValue);
+      console.log(numStorage);
    });
 });
+
+
+
 /*selects the operator buttons*/
 const operatorBttn = document.querySelectorAll(".symbol");
 operatorBttn.forEach((button) => {
    button.addEventListener("click", () => {
       console.log(12);
-   })
-})
+   });
+});
+
+function popDisplay() {
+
+}
 /* setting the buttons to variable bttns */
 /*const bttns = document.querySelectorAll("button");*/
 
@@ -80,3 +91,6 @@ operatorBttn.forEach((button) => {
    document.querySelector('.numBank p').textContent = buttonText;
    
 };*/
+
+
+ 
