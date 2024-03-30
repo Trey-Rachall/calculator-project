@@ -1,6 +1,6 @@
 const body = document.body;
 /* variables for the input */
-let firstNumber = "";
+let firstNumber = 0;
 let operator = '/';
 let secondNumber = null;
 
@@ -42,32 +42,34 @@ function operate() {
       return solution;
    };
 };
+
 const numStorage = [];
-let counter = 0;
 /*selects the number buttons*/
 const numButton = document.querySelectorAll(".number");
 numButton.forEach((button) => {
    button.addEventListener("click", () => {
       let newVariableValue = button.textContent;
       numStorage.push(newVariableValue);
-      console.log(newVariableValue);
-      console.log(numStorage);
+   firstNumber = numStorage.join("");
+   popDisplay(firstNumber);
+   
    });
 });
 
-
+console.log(popDisplay(firstNumber));
+function popDisplay(value) {
+   document.querySelector(".numBank p").textContent = value;
+};
 
 /*selects the operator buttons*/
 const operatorBttn = document.querySelectorAll(".symbol");
 operatorBttn.forEach((button) => {
    button.addEventListener("click", () => {
-      console.log(12);
+
    });
 });
 
-function popDisplay() {
 
-}
 /* setting the buttons to variable bttns */
 /*const bttns = document.querySelectorAll("button");*/
 
