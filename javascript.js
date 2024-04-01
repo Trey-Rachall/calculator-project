@@ -1,30 +1,30 @@
 const body = document.body;
 /* variables for the input */
 let firstNumber = 0;
-let operator = '/';
+let operator = null;
 let secondNumber = null;
-
+let solution = null;
 
 function add() {
-   let addSolution = firstNumber + secondNumber;
-   return addSolution;
+   solution = firstNumber + secondNumber;
+   return solution;
 };
 
 function subtract() {
-   let subtractSolution = firstNumber - secondNumber;
-   return subtractSolution;
+   solution = firstNumber - secondNumber;
+   return solution;
 };
 
 
 function multiply() {
-   let multiplySolution = firstNumber * secondNumber;
-   return multiplySolution;
+   solution = firstNumber * secondNumber;
+   return solution;
 };
 
 
 function divide() {
-   let divideSolution = firstNumber/secondNumber;
-   return divideSolution;
+   solution = firstNumber/secondNumber;
+   return solution;
 };
 
 function operate() {
