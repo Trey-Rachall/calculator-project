@@ -43,29 +43,34 @@ function operate() {
    };
 };
 
-const numStorage = [];
+let numStorage = [];
 /*selects the number buttons*/
 const numButton = document.querySelectorAll(".number");
 numButton.forEach((button) => {
    button.addEventListener("click", () => {
       let newVariableValue = button.textContent;
       numStorage.push(newVariableValue);
+      /*MAYBE MAKE firstNumber A PARAMETER? TO DYNAMICALLY INTEGRATE THE NEW NUMBERS*/
    firstNumber = numStorage.join("");
    popDisplay(firstNumber);
-   
+   console.log(numStorage);
    });
 });
 
-console.log(popDisplay(firstNumber));
+/*displays content to numbank*/
 function popDisplay(value) {
    document.querySelector(".numBank p").textContent = value;
 };
+
 
 /*selects the operator buttons*/
 const operatorBttn = document.querySelectorAll(".symbol");
 operatorBttn.forEach((button) => {
    button.addEventListener("click", () => {
-
+      numStorage = [];
+     operator = button.textContent;
+     console.log(operator);
+     console.log(numStorage)
    });
 });
 
