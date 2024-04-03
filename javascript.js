@@ -28,6 +28,11 @@ function divide() {
    return solution;
 };
 
+function equal() {
+   solution = firstNumber;
+   return solution;
+}
+
 function operate() {
    if (operator === "+") {
       solution = add();
@@ -41,7 +46,10 @@ function operate() {
    } else if (operator === "÷") {
       solution = divide();
       return solution;
-   };
+   } else if (operator === "=") {
+      solution = equal();
+      return;
+   }
 };
 
 
