@@ -94,4 +94,14 @@ operatorBttn.forEach((button) => {
    });
 });
 
+function clear() {
+firstNumber = '';
+operator = '';
+secondNumber = '';
+currentNumber = '';
+solution = '';
+document.querySelector(".numBank p").textContent = "0";
+};
 
+const clearBttn = document.querySelector(".clearButton");
+clearBttn.addEventListener("click", clear);
