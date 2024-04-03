@@ -1,9 +1,10 @@
 const body = document.body;
 /* variables for the input */
-let firstNumber = 0;
-let operator = null;
-let secondNumber = null;
-let solution = null;
+let firstNumber = '';
+let operator = '';
+let secondNumber = '';
+let currentNumber = '';
+let solution = '';
 
 function add() {
    solution = firstNumber + secondNumber;
@@ -43,17 +44,24 @@ function operate() {
    };
 };
 
-let numStorage = [];
+
 /*selects the number buttons*/
 const numButton = document.querySelectorAll(".number");
 numButton.forEach((button) => {
    button.addEventListener("click", () => {
       let newVariableValue = button.textContent;
-      numStorage.push(newVariableValue);
-      /*MAYBE MAKE firstNumber A PARAMETER? TO DYNAMICALLY INTEGRATE THE NEW NUMBERS*/
-   firstNumber = numStorage.join("");
-   popDisplay(firstNumber);
-   console.log(numStorage);
+      if (operator === '' || firstNumber === '') {
+         currentNumber += newVariableValue;
+         firstNumber = currentNumber;
+      } else {
+         currentNumber += newVariableValue;
+         secondNumber = currentNumber;
+      }
+   popDisplay(currentNumber);
+   console.log(currentNumber + "_currentNumber");
+   console.log(firstNumber + "_firstNumber");
+   console.log(secondNumber + "_secondNumber");
+   
    });
 });
 
@@ -67,37 +75,7 @@ function popDisplay(value) {
 const operatorBttn = document.querySelectorAll(".symbol");
 operatorBttn.forEach((button) => {
    button.addEventListener("click", () => {
-      numStorage = [];
+      currentNumber = '';
      operator = button.textContent;
-     console.log(operator);
-     console.log(numStorage)
    });
 });
-
-
-/* setting the buttons to variable bttns */
-/*const bttns = document.querySelectorAll("button");*/
-
-/* event listener for buttons */
-/*bttns.forEach((button) => {
-   button.addEventListener("click", () => {
-      if (button.textContent === "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9"){
-      let firstNumber = button.textContent;
-      console.log(firstNumber);
-      popDisplay(button.textContent);} else if (button.textContent === "+" || "-" || "×" || "/") {
-      let operator = button.textContent;
-      console.log(operator);
-      };
-      
-});
-});*/
-
-
-/*displays content to numbank*/
-/*function popDisplay(buttonText) {
-   document.querySelector('.numBank p').textContent = buttonText;
-   
-};*/
-
-
- 
