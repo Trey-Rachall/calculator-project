@@ -53,10 +53,15 @@ numButton.forEach((button) => {
       if (operator === '' || firstNumber === '') {
          currentNumber += newVariableValue;
          firstNumber = currentNumber;
+         firstNumberInt = parseInt(firstNumber);
+         firstNumber = firstNumberInt;
       } else {
          currentNumber += newVariableValue;
          secondNumber = currentNumber;
-      }
+         secondNumberInt = parseInt(secondNumber);
+         secondNumber = secondNumberInt;
+      } 
+
    popDisplay(currentNumber);
    console.log(currentNumber + "_currentNumber");
    console.log(firstNumber + "_firstNumber");
@@ -75,7 +80,18 @@ function popDisplay(value) {
 const operatorBttn = document.querySelectorAll(".symbol");
 operatorBttn.forEach((button) => {
    button.addEventListener("click", () => {
-      currentNumber = '';
+      if (secondNumber === '') {
+         currentNumber = '';
+      } else {
+         operate();
+         secondNumber = '';
+         currentNumber = '';
+         firstNumber = solution;
+         popDisplay(firstNumber);
+      }
      operator = button.textContent;
+     console.log(solution);
    });
 });
+
+
