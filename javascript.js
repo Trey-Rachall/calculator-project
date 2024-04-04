@@ -77,9 +77,18 @@ numButton.forEach((button) => {
    
    });
 });
-
+/*for (let i = value.toString().length; i < value.toString().length; i++)*/
 /*displays content to numbank*/
 function popDisplay(value) {
+   if (currentNumber.toString().length >= 4) {
+      let displayValueString = currentNumber.toString();
+      let commaDisplayValueString = displayValueString.slice(0,1) + "," + displayValueString.slice(1);
+      value = commaDisplayValueString;
+   } else if (currentNumber.toString().length >= 7) {
+      let displayValueString = currentNumber.toString;
+      let commaDisplayValueString = displayValueString.slice(3,4) + "," + displayValueString.slice(4);
+      value = commaDisplayValueString;
+   }
    document.querySelector(".numBank p").textContent = value;
 };
 
