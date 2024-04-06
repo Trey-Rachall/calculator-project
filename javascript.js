@@ -73,14 +73,9 @@ numButton.forEach((button) => {
       if (currentNumber.length < 10) {
          popDisplay(currentNumber);
       }
-   
-   console.log(typeof currentNumber + currentNumber + "_currentNumber");
-   console.log(typeof firstNumber + firstNumber + "_firstNumber");
-   console.log(typeof secondNumber + secondNumber + "_secondNumber");
-   
    });
 });
-/*for (let i = value.toString().length; i < value.toString().length; i++)*/
+
 /*displays content to numbank*/
 function popDisplay(value) {
    
@@ -108,10 +103,7 @@ operatorBttn.forEach((button) => {
             popDisplay(slicedSolution);
          }
       } 
-      
-      
      operator = button.textContent;
-     console.log(typeof solution);
    });
 });
 
