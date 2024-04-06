@@ -5,6 +5,7 @@ let operator = '';
 let secondNumber = '';
 let currentNumber = '';
 let solution = '';
+let slicedSolution = '';
 
 function add() {
    solution = firstNumber + secondNumber;
@@ -69,26 +70,20 @@ numButton.forEach((button) => {
          secondNumberInt = parseInt(secondNumber);
          secondNumber = secondNumberInt;
       } 
-
-   popDisplay(currentNumber);
-   console.log(currentNumber + "_currentNumber");
-   console.log(firstNumber + "_firstNumber");
-   console.log(secondNumber + "_secondNumber");
+      if (currentNumber.length < 10) {
+         popDisplay(currentNumber);
+      }
+   
+   console.log(typeof currentNumber + currentNumber + "_currentNumber");
+   console.log(typeof firstNumber + firstNumber + "_firstNumber");
+   console.log(typeof secondNumber + secondNumber + "_secondNumber");
    
    });
 });
 /*for (let i = value.toString().length; i < value.toString().length; i++)*/
 /*displays content to numbank*/
 function popDisplay(value) {
-   if (currentNumber.toString().length >= 4) {
-      let displayValueString = currentNumber.toString();
-      let commaDisplayValueString = displayValueString.slice(0,1) + "," + displayValueString.slice(1);
-      value = commaDisplayValueString;
-   } else if (currentNumber.toString().length >= 7) {
-      let displayValueString = currentNumber.toString;
-      let commaDisplayValueString = displayValueString.slice(3,4) + "," + displayValueString.slice(4);
-      value = commaDisplayValueString;
-   }
+   
    document.querySelector(".numBank p").textContent = value;
 };
 
@@ -97,6 +92,7 @@ function popDisplay(value) {
 const operatorBttn = document.querySelectorAll(".symbol");
 operatorBttn.forEach((button) => {
    button.addEventListener("click", () => {
+      
       if (secondNumber === '') {
          currentNumber = '';
       } else {
@@ -104,10 +100,18 @@ operatorBttn.forEach((button) => {
          secondNumber = '';
          currentNumber = '';
          firstNumber = solution;
-         popDisplay(firstNumber);
-      }
+         solution = solution.toString();
+         if (solution.length < 10) {
+            popDisplay(solution);
+         } else {
+            slicedSolution = solution.slice(0,9);
+            popDisplay(slicedSolution);
+         }
+      } 
+      
+      
      operator = button.textContent;
-     console.log(solution);
+     console.log(typeof solution);
    });
 });
 
